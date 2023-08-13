@@ -1,0 +1,32 @@
+<html>
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>逢甲大學USR查詢上傳相片</title>
+    </head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <body>
+		<form action="download.php" method="post">
+		<fieldset>
+			開始日期:<input type="date" name="startday" id="date"><br>
+			結束日期:<input type="date" name="endday" id="date2"><br>
+			部落:
+			<input type="radio" name="tribe" value="1" checked>眉溪部落
+				 <input type="radio" name="tribe" value="2" >山美部落
+				 <input type="radio" name="tribe" value="3" >古樓部落
+				 <input type="radio" name="tribe" value="4" >清流部落<br>
+			
+			<input type='submit' value="查詢" name='search'>
+			<input type="submit" value="下載" name='search'>
+			</form>
+			
+		</fieldset>
+    </body>
+	<script>
+		$('#date').val(new Date().toJSON().slice(0,10));
+		$('#date2').val(new Date().toJSON().slice(0,10));
+	</script>
+	
+
+
+</html>
